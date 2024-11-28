@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Test de Pokémon</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+      <h1>Test Pokémon</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">TABLA</a></li>
+          <li><a href="#html-questions">TIPOS</a></li>
+          <li><a href="#css-questions">POKEDEX</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Información del Estudiante</h2>
+          <div class="info">
+            <label for="student-name">Nombre:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Gmail:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info2">
+            <label for="birth-date">Año de Nacimiento:</label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">TIPOS</h2>
+          <div class="question-block">
+            <h3><span class="sr-only">Pregunta</span>1</h3>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                ¿Los tipos de la tabla Pokémon son 12?
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                    Verdadero
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                    Falso
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <h3><span class="sr-only">Pregunta</span>2</h3>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                ¿El tipo volador es superefectivo contra el tipo veneno?
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                    Verdadero
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                    Falso
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">POKÉDEX</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="selector">¿Existe un eevee de tipo acero?</label>
+            </div>
+            <div class="answer">
+              <select name="selector" id="selector" required>
+                <option value="">Selecciona una opción</option>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="css-textarea">Última Pregunta ¿cuál es pokémon nº 631 en la pokédex?</label>
+            </div>
+            <div class="answer">
+              <textarea id="css-textarea" name="css-questions" rows="5" cols="24"></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
+  </body>
+</html>
